@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+int n;
+cin>>n;
+vector<vector<int>> team;
+int binary;
+for(int i=0;i<n;i++){
+vector<int> t;
+for(int j=0;j<3;j++){
+cin>>binary;
+t.push_back(binary);
+}
+team.push_back(t);
+}
+int count=0;
+for(vector<int> i:team){
+if(accumulate(i.begin(),i.end(),0)>1) count++;
+}
+cout<<count;
+return 0;
+}
