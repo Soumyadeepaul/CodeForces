@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+int n;
+cin>>n;
+vector<string> bits;
+string operation;
+for(int i=0;i<n;i++){
+cin>>operation;
+bits.push_back(operation);
+}
+int x=0;
+for(string i:bits){
+for(int j=0;j<3;j++){
+if(i[j]=='-'){
+x=x-1;
+break;
+}
+else if(i[j]=='+'){
+x=x+1;
+break;
+}
+}
+}
+cout<<x;
+return 0;
+}
